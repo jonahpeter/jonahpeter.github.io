@@ -50,7 +50,7 @@
 
     /* Hero Section */
     .hero {
-      background-image: url('rings.jpg');
+      background-image: url('rings.jpg'); /* Background image */
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -75,8 +75,10 @@
     /* Section and Card Styling */
     .section {
       display: flex;
-      justify-content: space-around;
-      margin: 40px 0;
+      justify-content: space-between; /* Spread out the cards */
+      max-width: 1200px; /* Set a maximum width for the cards container */
+      margin: 40px auto; /* Center the cards horizontally */
+      padding: 0 40px; /* Add space on the sides */
     }
 
     .card {
@@ -91,7 +93,7 @@
       content: "";
       position: absolute;
       top: 10%;
-      right: 0;
+      right: -20px; /* Shift the line slightly outward to match the relaxed spacing */
       height: 80%;
       width: 1px;
       background-color: #E0E0E0;
@@ -139,7 +141,7 @@
 <body>
 
   <!-- Thin blue margin above the cover image -->
- <!-- <div class="top-margin"></div> -->
+  <!-- <div class="top-margin"></div> -->
 
   <!-- Header Links embedded over the hero image -->
   <div class="header">
