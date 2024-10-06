@@ -4,7 +4,7 @@
   <title>Jonah Peter</title>
 
   <!-- Google Fonts Import for Raleway -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,12 +16,22 @@
     html, body {
       margin: 0;
       padding: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      color: #333; /* Default color */
+    }
+
+    /* Thin blue margin above the cover image */
+    .top-margin {
+      background-color: #5B8FF9;
+      height: 5px;
+      width: 100%;
     }
 
     /* Embed the header over the hero section */
     .header {
       position: absolute;
-      top: 40px; /* Moved further down */
+      top: 40px;
       right: 20px;
       z-index: 100;
     }
@@ -31,7 +41,7 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 1.2em;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     .header a:hover {
@@ -43,24 +53,23 @@
       background-image: url('pillars_of_creation.webp');
       background-size: cover;
       background-position: center;
-      height: 60vh; /* Reduced height */
+      height: 60vh;
       text-align: center;
       color: white;
       position: relative;
-      margin-top: 0; /* Ensure no margin */
+      margin-top: 0;
       padding-top: 0;
-      padding-left: 0;
     }
 
     .hero h1 {
       padding-top: 100px;
       font-size: 2.5em;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .hero p {
       font-size: 1.5em;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     /* Section and Card Styling */
@@ -74,6 +83,7 @@
       text-align: center;
       width: 30%;
       position: relative;
+      font-weight: 300;
     }
 
     .card:not(:last-child):after {
@@ -87,11 +97,13 @@
     }
 
     .card h2 {
-      font-weight: 700;
+      color: #5B8FF9; /* Blue color for headings */
+      font-weight: 400;
     }
 
     .card p {
-      font-weight: 400;
+      color: #7d7d7d; /* Grey color for paragraphs */
+      font-weight: 300;
     }
 
     .card button {
@@ -118,6 +130,9 @@
   </style>
 </head>
 <body>
+
+  <!-- Thin blue margin above the cover image -->
+  <div class="top-margin"></div>
 
   <!-- Header Links embedded over the hero image -->
   <div class="header">
