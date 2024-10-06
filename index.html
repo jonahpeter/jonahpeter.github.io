@@ -86,6 +86,17 @@
       font-weight: 300;
     }
 
+    /* Vertical line between cards */
+    .card:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 80%;
+      width: 1px;
+      background-color: #E0E0E0;
+    }
+
     /* Increased vertical spacing in the card */
     .card h2 {
       color: #5B8FF9; /* Blue color for headings */
