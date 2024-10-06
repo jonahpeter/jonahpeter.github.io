@@ -142,21 +142,6 @@
       bottom: 0;       /* Stick to the bottom of the viewport */
     }
   </style>
-
-  <script>
-    function scrollToSection(sectionId) {
-      const element = document.getElementById(sectionId);
-      const headerOffset = 100; // Adjust this value for the header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  </script>
-
 </head>
 <body>
 
@@ -180,12 +165,12 @@
     <div class="card">
       <h2>Prebiotic building blocks at Enceladus</h2>
       <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
-      <button onclick="scrollToSection('astrobiology')">More</button> <!-- Link to Astrobiology section -->
+      <a href="research.html#astrobiology"><button>More</button></a> <!-- Link to Astrobiology section -->
     </div>
     <div class="card">
       <h2>Chiral-induced spin selectivity of light</h2>
       <p>A breakthrough study of the CISS effect applied to light.</p>
-      <button onclick="scrollToSection('quantum-optics')">More</button> <!-- Link to Quantum Optics section -->
+      <a href="research.html#quantum-optics"><button>More</button></a> <!-- Link to Quantum Optics section -->
     </div>
     <div class="card">
       <h2>Media updates<br>&nbsp;</h2> <!-- Added an extra space to force the height -->
