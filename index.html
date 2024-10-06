@@ -9,13 +9,17 @@
   <style>
     body {
       font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Header styling for the top right links */
+    /* Embed the header over the hero section */
     .header {
-      display: flex;
-      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
       padding: 20px;
+      z-index: 100;
     }
 
     .header a {
@@ -30,18 +34,19 @@
       text-decoration: underline;
     }
 
-    /* Hero section */
+    /* Hero Section */
     .hero {
       background-image: url('pillars_of_creation.webp');
       background-size: cover;
-      height: 300px;
+      background-position: center;
+      height: 100vh;
       text-align: center;
       color: white;
       position: relative;
     }
 
     .hero h1 {
-      padding-top: 100px;
+      padding-top: 150px;
       font-size: 2.5em;
       font-weight: 700;
     }
@@ -56,8 +61,6 @@
       display: flex;
       justify-content: space-around;
       margin: 40px 0;
-      border-top: 2px solid #E0E0E0;
-      border-bottom: 2px solid #E0E0E0;
     }
 
     .card {
@@ -109,7 +112,7 @@
 </head>
 <body>
 
-  <!-- Header Links -->
+  <!-- Header Links embedded over the hero image -->
   <div class="header">
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
