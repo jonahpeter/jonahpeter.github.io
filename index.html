@@ -76,21 +76,16 @@
     .section {
       display: flex;
       justify-content: space-between; /* Spread out the cards */
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 40px;
+      max-width: 1200px; /* Set a maximum width for the cards container */
+      margin: 40px auto; /* Center the cards horizontally */
+      padding: 0 40px; /* Add space on the sides */
     }
 
     .card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; /* Ensures content is evenly spaced */
       text-align: left; /* Left-align the card content */
       width: 30%;
       position: relative;
       font-weight: 300;
-      padding: 20px; /* Add padding inside the card */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
     }
 
     /* Vertical line between cards */
@@ -98,7 +93,7 @@
       content: "";
       position: absolute;
       top: 10%;
-      right: -20px;
+      right: -20px; /* Shift the line slightly outward to match the relaxed spacing */
       height: 80%;
       width: 1px;
       background-color: #E0E0E0;
@@ -115,7 +110,6 @@
       color: #7d7d7d; /* Grey color for paragraphs */
       font-weight: 300;
       margin-bottom: 20px; /* Add space below the paragraph */
-      flex-grow: 1; /* Ensures paragraph grows to fill available space */
     }
 
     .card button {
@@ -126,6 +120,7 @@
       cursor: pointer;
       font-size: 1em;
       font-family: 'Raleway', sans-serif;
+      margin-top: 10px;
       text-align: left; /* Left-align the button */
       display: inline-block;
     }
