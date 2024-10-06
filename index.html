@@ -1,56 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Website Title</title>
+  <title>Tony Teaches Tech</title>
 
   <!-- Google Fonts Import -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* Navigation Bar */
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .navbar a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 1em;
-      display: inline-block;
-    }
-
-    .navbar a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: white;
-    }
-
-    /* Hero Section */
     .hero {
       background-image: url('your-background-image.jpg');
       background-size: cover;
-      background-position: center;
-      height: 100vh; /* Full screen height */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
+      height: 300px;
       text-align: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .hero h1 {
-      font-size: 3.5em;
+      padding-top: 100px;
+      font-size: 2.5em;
       font-weight: 700;
     }
 
@@ -59,7 +31,40 @@
       font-weight: 400;
     }
 
-    /* Footer */
+    .section {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .card {
+      text-align: center;
+      width: 30%;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card h2 {
+      font-weight: 700;
+    }
+
+    .card p {
+      font-weight: 400;
+    }
+
+    .card button {
+      background-color: #5B8FF9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card button:hover {
+      background-color: #357ae8;
+    }
+
     footer {
       background-color: #1b3a57;
       color: white;
@@ -70,51 +75,31 @@
   </style>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#outreach">Outreach</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <!-- Hero Section -->
   <div class="hero">
-    <h1>Welcome to the Ocean Worlds Lab</h1>
+    <h1>Tony Teaches Tech</h1>
+    <p>Like, comment, and subscribe!</p>
   </div>
 
-  <!-- Content Sections (Placeholder for Research, Publications, etc.) -->
-  <div id="research">
-    <h2>Research</h2>
-    <p>Details about research...</p>
+  <div class="section">
+    <div class="card">
+      <h2>Magna tempus sed amet</h2>
+      <p>Morbi interdum mollis sapien. Sed ac risus.</p>
+      <button>More</button>
+    </div>
+    <div class="card">
+      <h2>Interdum lorem pulvinar</h2>
+      <p>Phasellus lacinia, magna a ullamcorper.</p>
+      <button>More</button>
+    </div>
+    <div class="card">
+      <h2>Libero purus magna sapien</h2>
+      <p>Morbi interdum mollis sapien. Sed ac risus.</p>
+      <button>More</button>
+    </div>
   </div>
 
-  <div id="publications">
-    <h2>Publications</h2>
-    <p>Details about publications...</p>
-  </div>
-
-  <div id="outreach">
-    <h2>Outreach</h2>
-    <p>Details about outreach...</p>
-  </div>
-
-  <div id="cv">
-    <h2>CV</h2>
-    <p>Details about the CV...</p>
-  </div>
-
-  <div id="contact">
-    <h2>Contact</h2>
-    <p>Details about how to contact...</p>
-  </div>
-
-  <!-- Footer -->
   <footer>
-    <p>Footer Content - Links or Copyright Info</p>
+    <p>Ipsum Feugiat - Semper suscipit posuere apede</p>
   </footer>
-
 </body>
 </html>
