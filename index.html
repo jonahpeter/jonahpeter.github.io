@@ -83,19 +83,27 @@
       text-align: center;
       width: 30%;
       position: relative;
+      font-weight: 300;
     }
 
-    /* Vertical spacing for content in each card */
+    .card:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 80%;
+      width: 1px;
+      background-color: #E0E0E0;
+    }
+
     .card h2 {
-      color: #5B8FF9;
+      color: #5B8FF9; /* Blue color for headings */
       font-weight: 400;
-      margin: 15px 0; /* Adds space above and below the heading */
     }
 
     .card p {
-      color: #7d7d7d;
+      color: #7d7d7d; /* Grey color for paragraphs */
       font-weight: 300;
-      margin: 15px 0; /* Adds space between paragraph and heading/button */
     }
 
     .card button {
@@ -106,7 +114,6 @@
       cursor: pointer;
       font-size: 1em;
       font-family: 'Raleway', sans-serif;
-      margin: 15px 0; /* Adds space between button and content */
     }
 
     .card button:hover {
@@ -118,4 +125,51 @@
       color: white;
       text-align: center;
       padding: 20px;
-      font-family:
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Thin blue margin above the cover image -->
+  <div class="top-margin"></div>
+
+  <!-- Header Links embedded over the hero image -->
+  <div class="header">
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#press">Press</a>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Jonah Peter</h1>
+    <p>Harvard University</p>
+  </div>
+
+  <!-- Main Section with Cards -->
+  <div class="section">
+    <div class="card">
+      <h2>Magna tempus sed amet</h2>
+      <p>Morbi interdum mollis sapien. Sed ac risus.</p>
+      <button>More</button>
+    </div>
+    <div class="card">
+      <h2>Interdum lorem pulvinar</h2>
+      <p>Phasellus lacinia, magna a ullamcorper.</p>
+      <button>More</button>
+    </div>
+    <div class="card">
+      <h2>Libero purus magna sapien</h2>
+      <p>Morbi interdum mollis sapien. Sed ac risus.</p>
+      <button>More</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Ipsum Feugiat - Semper suscipit posuere apede</p>
+  </footer>
+
+</body>
+</html>
