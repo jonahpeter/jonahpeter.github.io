@@ -131,15 +131,36 @@
       background-color: #1b3a57; /* Match hover color to footer */
     }
 
+    /* Alternating Section Styling */
+    .alt-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      gap: 40px;
+    }
+
+    .alt-section img {
+      width: 50%;
+      border-radius: 10px;
+    }
+
+    .alt-section .text {
+      width: 50%;
+      color: white;
+      background-color: #1b3a57; /* Dark background for contrast */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
     footer {
       background-color: #1b3a57;
       color: white;
       text-align: center;
       padding: 20px;
       font-family: 'Raleway', sans-serif;
-      position: fixed; /* Anchor the footer to the bottom */
-      width: 100%;     /* Ensure it stretches across the page */
-      bottom: 0;       /* Stick to the bottom of the viewport */
     }
   </style>
 </head>
@@ -165,18 +186,42 @@
     <div class="card">
       <h2>Prebiotic building blocks at Enceladus</h2>
       <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
-      <a href="research.html#astrobiology"><button>More</button></a> <!-- Link to Astrobiology section -->
+      <a href="research.html#astrobiology"><button>More</button></a>
     </div>
     <div class="card">
       <h2>Chiral-induced spin selectivity of light</h2>
       <p>A breakthrough study of the CISS effect applied to light.</p>
-      <a href="research.html#quantum-optics"><button>More</button></a> <!-- Link to Quantum Optics section -->
+      <a href="research.html#quantum-optics"><button>More</button></a>
     </div>
     <div class="card">
-      <h2>Media updates<br>&nbsp;</h2> <!-- Added an extra space to force the height -->
+      <h2>Media updates<br>&nbsp;</h2>
       <p>See our latest press coverage and learn about what's coming next!</p>
       <button>More</button>
     </div>
+  </div>
+
+  <!-- Alternating Content Section 1 -->
+  <div class="alt-section">
+    <img src="image1.jpg" alt="image1">
+    <div class="text">
+      <h2>Could Icy Ocean Worlds Support Life?</h2>
+      <p>
+        More info coming soon!
+      </p>
+      <p>Related Publications: Insert here!</p>
+    </div>
+  </div>
+
+  <!-- Alternating Content Section 2 -->
+  <div class="alt-section">
+    <div class="text">
+      <h2>How Does Chirality Influence The Emission Of Light?</h2>
+      <p>
+        Coming soon!
+      </p>
+      <p>Related Publications: Example et al. 2020</p>
+    </div>
+    <img src="image2.jpg" alt="image2">
   </div>
 
   <!-- Footer Section -->
