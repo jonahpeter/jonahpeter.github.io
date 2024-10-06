@@ -40,6 +40,12 @@
       text-decoration: underline;
     }
 
+    /* Offset section to account for fixed header */
+    .section-offset {
+      padding-top: 100px; /* Adjust to match header height */
+      margin-top: -100px; /* Pull it back to keep spacing consistent */
+    }
+
     /* Container for main content */
     .container {
       margin-top: 80px; /* Adds space below the fixed header */
@@ -101,7 +107,7 @@
   <div class="container">
 
     <!-- Astrobiology Section -->
-    <h1 id="astrobiology">Astrobiology</h1> <!-- Added ID for linking -->
+    <h1 id="astrobiology" class="section-offset">Astrobiology</h1> <!-- Added class for offset -->
     <div class="content">
       <img src="mass_spectra_fits.webp" alt="Mass Spectra Fits">
       <p>
@@ -112,7 +118,7 @@
     </div>
 
     <!-- Quantum Optics Section -->
-    <h1 id="quantum-optics">Quantum Optics</h1> <!-- Added ID for linking -->
+    <h1 id="quantum-optics" class="section-offset">Quantum Optics</h1> <!-- Added class for offset -->
     <div class="content">
       <img src="CISS_light.png" alt="CISS of Light">
       <p>
