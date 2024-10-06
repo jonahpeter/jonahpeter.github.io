@@ -40,10 +40,12 @@
       text-decoration: underline;
     }
 
-    /* Offset section to account for fixed header */
-    .section-offset {
-      padding-top: 100px; /* Adjust to match header height */
-      margin-top: -100px; /* Pull it back to keep spacing consistent */
+    /* Section Offset for Fixed Header */
+    h1 {
+      scroll-margin-top: 100px; /* Adjust based on the header height */
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 20px;
     }
 
     /* Container for main content */
@@ -53,12 +55,6 @@
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    h1 {
-      color: #333;
-      font-size: 2.5em;
-      margin-bottom: 20px;
     }
 
     /* Two-column layout */
@@ -107,7 +103,7 @@
   <div class="container">
 
     <!-- Astrobiology Section -->
-    <h1 id="astrobiology" class="section-offset">Astrobiology</h1> <!-- Added class for offset -->
+    <h1 id="astrobiology">Astrobiology</h1>
     <div class="content">
       <img src="mass_spectra_fits.webp" alt="Mass Spectra Fits">
       <p>
@@ -118,7 +114,7 @@
     </div>
 
     <!-- Quantum Optics Section -->
-    <h1 id="quantum-optics" class="section-offset">Quantum Optics</h1> <!-- Added class for offset -->
+    <h1 id="quantum-optics">Quantum Optics</h1>
     <div class="content">
       <img src="CISS_light.png" alt="CISS of Light">
       <p>
