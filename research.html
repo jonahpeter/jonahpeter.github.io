@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research - Jonah Peter</title>
+
+  <!-- Google Fonts Import for Raleway -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Raleway', sans-serif;
@@ -12,34 +15,107 @@
       padding: 0;
       color: #333;
     }
-    .container {
-      padding: 20px;
+
+    /* Header Styling */
+    .header {
+      background-color: #800000; /* MIT-like red color */
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 0;
+      text-align: center;
     }
-    h1 {
-      color: #5B8FF9;
-    }
-    p {
-      color: #7d7d7d;
-    }
-    .back {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 15px;
-      background-color: #5B8FF9;
+
+    .header a {
       color: white;
       text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container for main content */
+    .container {
+      margin-top: 80px; /* Adds space below the fixed header */
+      padding: 20px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    /* Two-column layout */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .content img {
+      max-width: 500px;
+      height: auto;
       border-radius: 5px;
     }
-    .back:hover {
-      background-color: #357ae8;
+
+    .content p {
+      flex: 1;
+      line-height: 1.6em;
+      font-size: 1.1em;
+    }
+
+    /* Footer section */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Research</h1>
-    <p>Welcome to the research section. Here, you will find details about my research projects, publications, and ongoing work.</p>
-    <a href="index.html" class="back">Back to Home</a>
+
+  <!-- Fixed Header -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="biography.html">Biography</a>
+    <a href="research.html">Research</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="cv-contact.html">CV/Contact</a>
   </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Title Section -->
+    <h1>Research</h1>
+
+    <!-- Introduction Text and Image Section -->
+    <div class="content">
+      <img src="pillars_of_creation.webp" alt="Research Image">
+      <p>
+        Professor Jonah's main research goal is to identify and explore new frontiers in space technology, focusing on space exploration methodologies. Here we will begin with an introduction to the research process.
+        <br><br>
+        Thousands of research topics are being actively pursued, from planetary exploration to space technology. The diagram on the left showcases one of the breakthrough research projects in planetary detection.
+      </p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>Credit: Research Team, 2024</p>
+    </div>
+  </div>
+
 </body>
 </html>
