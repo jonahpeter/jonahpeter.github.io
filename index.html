@@ -63,4 +63,58 @@
 
     .hero h1 {
       padding-top: 100px;
-      font-size: 2
+      font-size: 2.5em;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+
+    /* Section and Card Styling */
+    .section {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .card {
+      text-align: center;
+      width: 30%;
+      position: relative;
+      font-weight: 300;
+    }
+
+    .card:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 80%;
+      width: 1px;
+      background-color: #E0E0E0;
+    }
+
+    .card h2 {
+      color: #5B8FF9; /* Blue color for headings */
+      font-weight: 400;
+    }
+
+    .card p {
+      color: #7d7d7d; /* Grey color for paragraphs */
+      font-weight: 300;
+    }
+
+    .card button {
+      background-color: #5B8FF9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .card button:hover {
+  
