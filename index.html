@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonah Peter</title>
 
   <!-- Google Fonts Import for Raleway -->
@@ -16,7 +14,6 @@
     }
 
     html, body {
-      height: 100%; /* Make sure the body and HTML are 100% of the viewport height */
       margin: 0;
       padding: 0;
       font-family: 'Raleway', sans-serif;
@@ -24,13 +21,14 @@
       color: #333; /* Default color */
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+    /* Thin blue margin above the cover image */
+    .top-margin {
+      background-color: #3366cc; /* Darker blue */
+      height: 5px;
+      width: 100%;
     }
 
-    /* Header Styling */
+    /* Embed the header over the hero section */
     .header {
       position: absolute;
       top: 40px;
@@ -53,18 +51,20 @@
     /* Hero Section with Fixed Background */
     .hero {
       background-image: url('rings.jpg'); /* Background image */
-      background-size: cover; /* Ensure it covers the entire container */
-      background-position: center bottom; /* Adjust the image to display the bottom */
-      background-attachment: fixed; /* Fixed background while scrolling */
-      height: 55vh; /* Set a fixed height for the hero section */
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-size: contain;
+      background-position: center -75px; /* Manually adjust the vertical position */
+      background-attachment: fixed; /* Keep the background fixed while scrolling */
+      height: 70vh;
       text-align: center;
       color: white;
+      position: relative;
+      margin-top: 0;
+      padding-top: 0;
+      margin-bottom: 0;
     }
 
     .hero h1 {
+      padding-top: 100px;
       font-size: 2.5em;
       font-weight: 500;
     }
@@ -74,26 +74,26 @@
       font-weight: 300;
     }
 
-    /* Learn More Section */
     .learn-more-section {
       background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       color: white;
       text-align: center;
-      padding: 50px 20px; /* Padding for space inside the section */
+      padding: 80px 20px; /* Padding for space inside the section */
+      position: relative;
     }
-
+    
     .learn-more-section h2 {
       font-size: 2em;
       font-weight: 600;
-      letter-spacing: 1.5px; /* Add letter spacing */
+      letter-spacing: 1.5px; /* Add letter spacing for visual effect */
       margin-bottom: 30px; /* Space between text and arrow */
     }
-
+    
     .learn-more-section .arrow-down {
       font-size: 3em;
       animation: bounce 2s infinite; /* Add animation for a bouncing effect */
     }
-
+    
     /* Bounce animation */
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
@@ -106,6 +106,7 @@
         transform: translateY(-5px);
       }
     }
+
 
     /* New Section Between Hero and Alternating Content */
     .intro-section {
@@ -194,6 +195,7 @@
       font-weight: 300;
     }
 
+    /* Vertical line between cards */
     .card:not(:last-child):after {
       content: "";
       position: absolute;
@@ -204,6 +206,7 @@
       background-color: #E0E0E0;
     }
 
+    /* Card Header Styling */
     .card h2 {
       color: #3366cc; /* Darker blue for headings */
       font-weight: 400;
@@ -216,6 +219,7 @@
       margin-bottom: 20px; /* Add space below the paragraph */
     }
 
+    /* Button Styling */
     .card button {
       background-color: #3366cc; /* Darker blue for buttons */
       color: white;
@@ -244,97 +248,91 @@
 </head>
 <body>
 
-  <div class="container">
-    
-    <!-- Header Links embedded over the hero image -->
-    <div class="header">
-      <a href="index.html">Home</a>
-      <a href="biography.html">Biography</a>
-      <a href="research.html">Research</a>
-      <a href="outreach.html">Outreach</a>
-      <a href="jonah_peter_cv.pdf">CV/Contact</a>
-    </div>
+  <!-- Header Links embedded over the hero image -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="biography.html">Biography</a>
+    <a href="research.html">Research</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="jonah_peter_cv.pdf">CV/Contact</a>
+  </div>
 
-    <!-- Hero Section with Fixed Background -->
-    <div class="hero">
-      <div>
-        <h1>Jonah Peter</h1>
-        <p>Harvard University</p>
-      </div>
-    </div>
+  <!-- Hero Section with Fixed Background -->
+  <div class="hero">
+    <h1>Jonah Peter</h1>
+    <p>Harvard University</p>
+  </div>
 
-    <!-- Learn More Section -->
-    <div class="learn-more-section">
-      <h2>LEARN MORE</h2>
-      <div class="arrow-down">↓</div>
-    </div>
+  <!-- Learn More Section -->
+  <div class="learn-more-section">
+    <h2>LEARN MORE</h2>
+    <div class="arrow-down">↓</div>
+  </div>
 
-    <!-- New Section Between Hero and Alternating Content -->
-    <div class="intro-section">
-      <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
+  <!-- New Section Between Hero and Alternating Content -->
+  <div class="intro-section">
+    <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
+    <p>
+      The idea that the earliest stages of chemical evolution may have proceeded deterministically 
+      as a consequence of astrophysical and planetary constraints is both intuitive and appealing. 
+      I study the physical processes leading to the formation of life's essential building blocks:
+      from charged particle dynamics on the surfaces of icy worlds, to the quantum optical properties 
+      of primordial biopolymers.
+    </p>
+  </div>
+
+  <!-- Alternating Content Section 1 -->
+  <div class="alt-section section-blue">
+    <img src="enceladus.jpg" alt="Enceladus">
+    <div class="text">
+      <h2>THE SEARCH FOR LIFE AT ENCELADUS</h2>
+      <p>More info coming soon!</p>
+      <p>Related Publications: Peter et al., 2023</p>
+    </div>
+  </div>
+
+  <!-- Alternating Content Section 2 -->
+  <div class="alt-section section-lightblue">
+    <div class="text">
+      <h2>QUANTUM COHERENCE: AN EXPLANATION FOR BIOLOGICAL HOMOCHIRALITY?</h2>
       <p>
-        The idea that the earliest stages of chemical evolution may have proceeded deterministically 
-        as a consequence of astrophysical and planetary constraints is both intuitive and appealing. 
-        I study the physical processes leading to the formation of life's essential building blocks:
-        from charged particle dynamics on the surfaces of icy worlds, to the quantum optical properties 
-        of primordial biopolymers.
+        The pervasive observation of enantiomeric excesses consistent with Earth biology 
+        (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
+        bodies across the solar system points towards an astronomical scale symmetry breaking
+        event before the origin of life.
       </p>
+      <p>Related Publications: Peter et al., 2024a, 2024b</p>
     </div>
+    <img src="double_helix.jpg" alt="DNA">
+  </div>
 
-    <!-- Alternating Content Section 1 -->
-    <div class="alt-section section-blue">
-      <img src="enceladus.jpg" alt="Enceladus">
-      <div class="text">
-        <h2>THE SEARCH FOR LIFE AT ENCELADUS</h2>
-        <p>More info coming soon!</p>
-        <p>Related Publications: Peter et al., 2023</p>
-      </div>
+  <!-- Alternating Content Section 3 (Re-added) -->
+  <div class="alt-section section-third">
+    <img src="enceladus.jpg" alt="Enceladus">
+    <div class="text">
+      <h2>Could Icy Ocean Worlds Support Life?</h2>
+      <p>More info coming soon!</p>
+      <p>Related Publications: Peter et al., 2023</p>
     </div>
+  </div>
 
-    <!-- Alternating Content Section 2 -->
-    <div class="alt-section section-lightblue">
-      <div class="text">
-        <h2>QUANTUM COHERENCE: AN EXPLANATION FOR BIOLOGICAL HOMOCHIRALITY?</h2>
-        <p>
-          The pervasive observation of enantiomeric excesses consistent with Earth biology 
-          (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
-          bodies across the solar system points towards an astronomical scale symmetry breaking
-          event before the origin of life.
-        </p>
-        <p>Related Publications: Peter et al., 2024a, 2024b</p>
-      </div>
-      <img src="double_helix.jpg" alt="DNA">
+  <!-- Main Section with Cards (Now placed below alternating content) -->
+  <div class="section">
+    <div class="card">
+      <h2>Prebiotic building blocks at Enceladus</h2>
+      <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
+      <a href="research.html#astrobiology"><button>More</button></a>
     </div>
-
-    <!-- Alternating Content Section 3 (Re-added) -->
-    <div class="alt-section section-third">
-      <img src="enceladus.jpg" alt="Enceladus">
-      <div class="text">
-        <h2>Could Icy Ocean Worlds Support Life?</h2>
-        <p>More info coming soon!</p>
-        <p>Related Publications: Peter et al., 2023</p>
-      </div>
+    <div class="card">
+      <h2>Chiral-induced spin selectivity of light</h2>
+      <p>A breakthrough study of the CISS effect applied to light.</p>
+      <a href="research.html#quantum-optics"><button>More</button></a>
     </div>
-
-    <!-- Main Section with Cards -->
-    <div class="section">
-      <div class="card">
-        <h2>Prebiotic building blocks at Enceladus</h2>
-        <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
-        <a href="research.html#astrobiology"><button>More</button></a>
-      </div>
-      <div class="card">
-        <h2>Chiral-induced spin selectivity of light</h2>
-        <p>A breakthrough study of the CISS effect applied to light.</p>
-        <a href="research.html#quantum-optics"><button>More</button></a>
-      </div>
-      <div class="card">
-        <h2>Media updates<br>&nbsp;</h2>
-        <p>See our latest press coverage and learn about what's coming next!</p>
-        <button>More</button>
-      </div>
+    <div class="card">
+      <h2>Media updates<br>&nbsp;</h2>
+      <p>See our latest press coverage and learn about what's coming next!</p>
+      <button>More</button>
     </div>
-
   </div>
 
   <!-- Footer Section -->
