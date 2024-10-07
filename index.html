@@ -52,7 +52,7 @@
     .hero {
       background-image: url('rings.jpg'); /* Background image */
       background-size: contain;
-      background-position: center -100px; /* Manually adjust the vertical position */
+      background-position: center -75px; /* Manually adjust the vertical position */
       background-attachment: fixed; /* Keep the background fixed while scrolling */
       height: 80vh;
       text-align: center;
@@ -73,6 +73,40 @@
       font-size: 1.5em;
       font-weight: 300;
     }
+
+    .learn-more-section {
+      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
+      color: white;
+      text-align: center;
+      padding: 80px 20px; /* Padding for space inside the section */
+      position: relative;
+    }
+    
+    .learn-more-section h2 {
+      font-size: 2em;
+      font-weight: 600;
+      letter-spacing: 1.5px; /* Add letter spacing for visual effect */
+      margin-bottom: 30px; /* Space between text and arrow */
+    }
+    
+    .learn-more-section .arrow-down {
+      font-size: 3em;
+      animation: bounce 2s infinite; /* Add animation for a bouncing effect */
+    }
+    
+    /* Bounce animation */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
 
     /* New Section Between Hero and Alternating Content */
     .intro-section {
@@ -227,6 +261,12 @@
   <div class="hero">
     <h1>Jonah Peter</h1>
     <p>Harvard University</p>
+  </div>
+
+  <!-- Learn More Section -->
+  <div class="learn-more-section">
+    <h2>LEARN MORE</h2>
+    <div class="arrow-down">↓</div>
   </div>
 
   <!-- New Section Between Hero and Alternating Content -->
