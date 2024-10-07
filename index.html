@@ -73,6 +73,28 @@
       font-weight: 300;
     }
 
+    /* New Section Between Hero and Alternating Content */
+    .intro-section {
+      background-color: #1b3a57; /* Background color from the screenshot */
+      color: white;
+      text-align: center;
+      padding: 80px 20px; /* Spacing inside the section */
+    }
+
+    .intro-section h2 {
+      font-size: 2.2em; /* Bold uppercase text */
+      font-weight: 700;
+      letter-spacing: 2px; /* Increase letter spacing for a bold effect */
+      margin-bottom: 20px; /* Space between the header and the paragraph */
+    }
+
+    .intro-section p {
+      font-size: 1.2em; /* Larger font size for readability */
+      line-height: 1.8em; /* Comfortable line height */
+      max-width: 800px; /* Restrict the width for readability */
+      margin: 0 auto; /* Center the paragraph */
+    }
+
     /* Alternating Section Styling */
     .alt-section {
       display: flex;
@@ -206,11 +228,23 @@
     <p>Harvard University</p>
   </div>
 
+  <!-- New Section Between Hero and Alternating Content -->
+  <div class="intro-section">
+    <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
+    <p>
+      The idea that the earliest stages of chemical evolution may have proceeded deterministically 
+      as a consequence of astrophysical and planetary constraints is both intuitive and appealing. 
+      I study the physical processes leading to the formation of life's essential building blocks:
+      from charged particle dynamics on the surfaces of icy worlds, to the quantum optical properties 
+      of primordial biopolymers.
+    </p>
+  </div>
+
   <!-- Alternating Content Section 1 -->
   <div class="alt-section section-blue">
     <img src="enceladus.jpg" alt="Enceladus">
     <div class="text">
-      <h2>Could Icy Ocean Worlds Support Life?</h2>
+      <h2>THE SEARCH FOR LIFE AT ENCELADUS</h2>
       <p>More info coming soon!</p>
       <p>Related Publications: Peter et al., 2023</p>
     </div>
@@ -219,21 +253,16 @@
   <!-- Alternating Content Section 2 -->
   <div class="alt-section section-lightblue">
     <div class="text">
-      <h2>How Does Chirality Influence the Emission of Light?</h2>
-      <p>Coming soon!</p>
+      <h2>QUANTUM COHERENCE: AN EXPLANATION FOR BIOLOGICAL HOMOCHIRALITY?</h2>
+      <p>
+        The pervasive observation of enantiomeric excesses consistent with Earth biology 
+        (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
+        bodies across the solar system points towards an astronomical scale symmetry breaking
+        event before the origin of life.
+      </p>
       <p>Related Publications: Peter et al., 2024a, 2024b</p>
     </div>
     <img src="double_helix.jpg" alt="DNA">
-  </div>
-
-  <!-- Alternating Content Section 3 (New) -->
-  <div class="alt-section section-third">
-    <img src="enceladus.jpg" alt="Enceladus">
-    <div class="text">
-      <h2>Could Icy Ocean Worlds Support Life?</h2>
-      <p>More info coming soon!</p>
-      <p>Related Publications: Peter et al., 2023</p>
-    </div>
   </div>
 
   <!-- Main Section with Cards (Now placed below alternating content) -->
