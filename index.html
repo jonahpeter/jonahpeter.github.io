@@ -142,8 +142,10 @@
     }
 
     .alt-section img {
-      width: 50%;
+      width: 45%; /* Set maximum width of the image */
+      max-height: 400px; /* Set maximum height of the image */
       border-radius: 10px;
+      object-fit: cover; /* Ensure the image fits within the defined width/height */
     }
 
     .alt-section .text {
