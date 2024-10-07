@@ -136,9 +136,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 20px;
+      max-width: 100%; /* Extend background across the entire page */
+      padding: 40px 0; /* Padding inside the alternating sections */
       gap: 40px;
     }
 
@@ -149,10 +148,17 @@
 
     .alt-section .text {
       width: 50%;
-      color: white;
-      background-color: #1b3a57; /* Dark background for contrast */
       padding: 20px;
       border-radius: 10px;
+      color: white;
+    }
+
+    .section-blue {
+      background-color: #1b3a57; /* Dark blue for first section */
+    }
+
+    .section-lightblue {
+      background-color: #294a99; /* Lighter blue for second section */
     }
 
     footer {
@@ -201,27 +207,23 @@
   </div>
 
   <!-- Alternating Content Section 1 -->
-  <div class="alt-section">
-    <img src="image1.jpg" alt="image1">
+  <div class="alt-section section-blue">
+    <img src="image1.jpg" alt="Research Image 1">
     <div class="text">
       <h2>Could Icy Ocean Worlds Support Life?</h2>
-      <p>
-        More info coming soon!
-      </p>
+      <p>More info coming soon!</p>
       <p>Related Publications: Insert here!</p>
     </div>
   </div>
 
   <!-- Alternating Content Section 2 -->
-  <div class="alt-section">
+  <div class="alt-section section-lightblue">
     <div class="text">
-      <h2>How Does Chirality Influence The Emission Of Light?</h2>
-      <p>
-        Coming soon!
-      </p>
+      <h2>How Does Chirality Influence the Emission of Light?</h2>
+      <p>Coming soon!</p>
       <p>Related Publications: Example et al. 2020</p>
     </div>
-    <img src="image2.jpg" alt="image2">
+    <img src="image2.jpg" alt="Research Image 2">
   </div>
 
   <!-- Footer Section -->
