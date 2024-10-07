@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonah Peter</title>
 
   <!-- Google Fonts Import for Raleway -->
@@ -14,7 +16,7 @@
     }
 
     html, body {
-      height: 100%; /* Ensure full height */
+      height: 100%; /* Make sure the body and HTML are 100% of the viewport height */
       margin: 0;
       padding: 0;
       font-family: 'Raleway', sans-serif;
@@ -25,7 +27,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Full viewport height */
+      min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
     }
 
     /* Header Styling */
@@ -51,16 +53,15 @@
     /* Hero Section with Fixed Background */
     .hero {
       background-image: url('rings.jpg'); /* Background image */
-      background-size: cover; /* Keep cover size */
-      background-position: center bottom; /* Shift image upwards to reveal the bottom */
-      background-attachment: fixed; /* Keep the background fixed while scrolling */
-      flex: 1; /* Flex-grow to take available height */
-      text-align: center;
-      color: white;
+      background-size: cover; /* Ensure it covers the entire container */
+      background-position: center bottom; /* Adjust the image to display the bottom */
+      background-attachment: fixed; /* Fixed background while scrolling */
+      height: 55vh; /* Set a fixed height for the hero section */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 60vh; /* Set fixed height */
+      text-align: center;
+      color: white;
     }
 
     .hero h1 {
@@ -75,25 +76,25 @@
 
     /* Learn More Section */
     .learn-more-section {
-      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Gradient background */
+      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 50px 20px; /* Padding for space inside the section */
     }
 
     .learn-more-section h2 {
       font-size: 2em;
       font-weight: 600;
-      letter-spacing: 1.5px;
-      margin-bottom: 30px;
+      letter-spacing: 1.5px; /* Add letter spacing */
+      margin-bottom: 30px; /* Space between text and arrow */
     }
 
     .learn-more-section .arrow-down {
       font-size: 3em;
-      animation: bounce 2s infinite;
+      animation: bounce 2s infinite; /* Add animation for a bouncing effect */
     }
 
-    /* Bounce animation for arrow */
+    /* Bounce animation */
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -108,24 +109,24 @@
 
     /* New Section Between Hero and Alternating Content */
     .intro-section {
-      background-color: #1b3a57; /* Dark background */
+      background-color: #1b3a57; /* Background color from the screenshot */
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px; /* Spacing inside the section */
     }
 
     .intro-section h2 {
-      font-size: 2.2em;
+      font-size: 2.2em; /* Bold uppercase text */
       font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
+      letter-spacing: 2px; /* Increase letter spacing for a bold effect */
+      margin-bottom: 20px; /* Space between the header and the paragraph */
     }
 
     .intro-section p {
-      font-size: 1.2em;
-      line-height: 1.8em;
-      max-width: 800px;
-      margin: 0 auto;
+      font-size: 1.2em; /* Larger font size for readability */
+      line-height: 1.8em; /* Comfortable line height */
+      max-width: 800px; /* Restrict the width for readability */
+      margin: 0 auto; /* Center the paragraph */
     }
 
     /* Alternating Section Styling */
@@ -133,16 +134,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 100%;
-      padding: 40px 0;
+      max-width: 100%; /* Extend background across the entire page */
+      padding: 40px 0; /* Padding inside the alternating sections */
       gap: 40px;
     }
 
     .alt-section img {
-      width: 45%;
-      max-height: 400px;
+      width: 45%; /* Set maximum width of the image */
+      max-height: 400px; /* Set maximum height of the image */
       border-radius: 10px;
-      object-fit: cover;
+      object-fit: cover; /* Ensure the image fits within the defined width/height */
     }
 
     .alt-section .text {
@@ -153,41 +154,41 @@
     }
 
     .alt-section h2 {
-      font-size: 2.2em;
+      font-size: 2.2em; /* Increased font size for the headers */
       font-weight: 700;
-      margin-bottom: 20px;
-      letter-spacing: 0.5px;
+      margin-bottom: 20px; /* Space below headers */
+      letter-spacing: 0.5px; /* Adds letter spacing for a cleaner look */
     }
 
     .alt-section p {
-      font-size: 1.2em;
-      line-height: 1.8em;
-      margin-bottom: 15px;
+      font-size: 1.2em; /* Slightly larger font for paragraphs */
+      line-height: 1.8em; /* Increased line height for readability */
+      margin-bottom: 15px; /* Space below paragraphs */
     }
 
     .section-blue {
-      background-color: #1b3a57;
+      background-color: #1b3a57; /* Dark blue for first section */
     }
 
     .section-lightblue {
-      background-color: #294a99;
+      background-color: #294a99; /* Lighter blue for second section */
     }
 
     .section-third {
-      background-color: #1e497f;
+      background-color: #1e497f; /* Slightly different shade for third section */
     }
 
     /* Section and Card Styling */
     .section {
       display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 40px;
+      justify-content: space-between; /* Spread out the cards */
+      max-width: 1200px; /* Set a maximum width for the cards container */
+      margin: 40px auto; /* Center the cards horizontally */
+      padding: 0 40px; /* Add space on the sides */
     }
 
     .card {
-      text-align: left;
+      text-align: left; /* Left-align the card content */
       width: 30%;
       position: relative;
       font-weight: 300;
@@ -197,26 +198,26 @@
       content: "";
       position: absolute;
       top: 10%;
-      right: -20px;
+      right: -20px; /* Shift the line slightly outward to match the relaxed spacing */
       height: 80%;
       width: 1px;
       background-color: #E0E0E0;
     }
 
     .card h2 {
-      color: #3366cc;
+      color: #3366cc; /* Darker blue for headings */
       font-weight: 400;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Add space below the heading */
     }
 
     .card p {
-      color: #7d7d7d;
+      color: #7d7d7d; /* Grey color for paragraphs */
       font-weight: 300;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Add space below the paragraph */
     }
 
     .card button {
-      background-color: #3366cc;
+      background-color: #3366cc; /* Darker blue for buttons */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -224,12 +225,12 @@
       font-size: 1em;
       font-family: 'Raleway', sans-serif;
       margin-top: 10px;
-      text-align: left;
+      text-align: left; /* Left-align the button */
       display: inline-block;
     }
 
     .card button:hover {
-      background-color: #1b3a57;
+      background-color: #1b3a57; /* Match hover color to footer */
     }
 
     footer {
