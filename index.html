@@ -73,64 +73,6 @@
       font-weight: 300;
     }
 
-    /* Section and Card Styling */
-    .section {
-      display: flex;
-      justify-content: space-between; /* Spread out the cards */
-      max-width: 1200px; /* Set a maximum width for the cards container */
-      margin: 40px auto; /* Center the cards horizontally */
-      padding: 0 40px; /* Add space on the sides */
-    }
-
-    .card {
-      text-align: left; /* Left-align the card content */
-      width: 30%;
-      position: relative;
-      font-weight: 300;
-    }
-
-    /* Vertical line between cards */
-    .card:not(:last-child):after {
-      content: "";
-      position: absolute;
-      top: 10%;
-      right: -20px; /* Shift the line slightly outward to match the relaxed spacing */
-      height: 80%;
-      width: 1px;
-      background-color: #E0E0E0;
-    }
-
-    /* Card Header Styling */
-    .card h2 {
-      color: #3366cc; /* Darker blue for headings */
-      font-weight: 400;
-      margin-bottom: 20px; /* Add space below the heading */
-    }
-
-    .card p {
-      color: #7d7d7d; /* Grey color for paragraphs */
-      font-weight: 300;
-      margin-bottom: 20px; /* Add space below the paragraph */
-    }
-
-    /* Button Styling */
-    .card button {
-      background-color: #3366cc; /* Darker blue for buttons */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 1em;
-      font-family: 'Raleway', sans-serif;
-      margin-top: 10px;
-      text-align: left; /* Left-align the button */
-      display: inline-block;
-    }
-
-    .card button:hover {
-      background-color: #1b3a57; /* Match hover color to footer */
-    }
-
     /* Alternating Section Styling */
     .alt-section {
       display: flex;
@@ -163,75 +105,24 @@
       background-color: #294a99; /* Lighter blue for second section */
     }
 
-    footer {
-      background-color: #1b3a57;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-family: 'Raleway', sans-serif;
+    /* Section and Card Styling */
+    .section {
+      display: flex;
+      justify-content: space-between; /* Spread out the cards */
+      max-width: 1200px; /* Set a maximum width for the cards container */
+      margin: 40px auto; /* Center the cards horizontally */
+      padding: 0 40px; /* Add space on the sides */
     }
-  </style>
-</head>
-<body>
 
-  <!-- Header Links embedded over the hero image -->
-  <div class="header">
-    <a href="index.html">Home</a>
-    <a href="biography.html">Biography</a>
-    <a href="research.html">Research</a>
-    <a href="outreach.html">Outreach</a>
-    <a href="jonah_peter_cv.pdf">CV/Contact</a>
-  </div>
+    .card {
+      text-align: left; /* Left-align the card content */
+      width: 30%;
+      position: relative;
+      font-weight: 300;
+    }
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Jonah Peter</h1>
-    <p>Harvard University</p>
-  </div>
-
-  <!-- Main Section with Cards -->
-  <div class="section">
-    <div class="card">
-      <h2>Prebiotic building blocks at Enceladus</h2>
-      <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
-      <a href="research.html#astrobiology"><button>More</button></a>
-    </div>
-    <div class="card">
-      <h2>Chiral-induced spin selectivity of light</h2>
-      <p>A breakthrough study of the CISS effect applied to light.</p>
-      <a href="research.html#quantum-optics"><button>More</button></a>
-    </div>
-    <div class="card">
-      <h2>Media updates<br>&nbsp;</h2>
-      <p>See our latest press coverage and learn about what's coming next!</p>
-      <button>More</button>
-    </div>
-  </div>
-
-  <!-- Alternating Content Section 1 -->
-  <div class="alt-section section-blue">
-    <img src="enceladus.jpg" alt="Enceladus">
-    <div class="text">
-      <h2>Could Icy Ocean Worlds Support Life?</h2>
-      <p>More info coming soon!</p>
-      <p>Related Publications: Peter et al., 2023</p>
-    </div>
-  </div>
-
-  <!-- Alternating Content Section 2 -->
-  <div class="alt-section section-lightblue">
-    <div class="text">
-      <h2>How Does Chirality Influence the Emission of Light?</h2>
-      <p>Coming soon!</p>
-      <p>Related Publications: Peter et al., 2024a, 2024b</p>
-    </div>
-    <img src="double_helix.jpg" alt="DNA">
-  </div>
-
-  <!-- Footer Section -->
-  <footer>
-    <p> </p>
-  </footer>
-
-</body>
-</html>
+    /* Vertical line between cards */
+    .card:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: 1
