@@ -14,6 +14,7 @@
     }
 
     html, body {
+      height: 100%; /* Ensure full height */
       margin: 0;
       padding: 0;
       font-family: 'Raleway', sans-serif;
@@ -21,14 +22,13 @@
       color: #333; /* Default color */
     }
 
-    /* Thin blue margin above the cover image */
-    .top-margin {
-      background-color: #3366cc; /* Darker blue */
-      height: 5px;
-      width: 100%;
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Full viewport height */
     }
 
-    /* Embed the header over the hero section */
+    /* Header Styling */
     .header {
       position: absolute;
       top: 40px;
@@ -51,20 +51,19 @@
     /* Hero Section with Fixed Background */
     .hero {
       background-image: url('rings.jpg'); /* Background image */
-      background-size: contain;
-      background-position: center -75px; /* Manually adjust the vertical position */
+      background-size: cover; /* Keep cover size */
+      background-position: center bottom; /* Shift image upwards to reveal the bottom */
       background-attachment: fixed; /* Keep the background fixed while scrolling */
-      height: 70vh;
+      flex: 1; /* Flex-grow to take available height */
       text-align: center;
       color: white;
-      position: relative;
-      margin-top: 0;
-      padding-top: 0;
-      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh; /* Set fixed height */
     }
 
     .hero h1 {
-      padding-top: 100px;
       font-size: 2.5em;
       font-weight: 500;
     }
@@ -74,27 +73,27 @@
       font-weight: 300;
     }
 
+    /* Learn More Section */
     .learn-more-section {
-      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
+      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Gradient background */
       color: white;
       text-align: center;
-      padding: 80px 20px; /* Padding for space inside the section */
-      position: relative;
+      padding: 50px 20px;
     }
-    
+
     .learn-more-section h2 {
       font-size: 2em;
       font-weight: 600;
-      letter-spacing: 1.5px; /* Add letter spacing for visual effect */
-      margin-bottom: 30px; /* Space between text and arrow */
+      letter-spacing: 1.5px;
+      margin-bottom: 30px;
     }
-    
+
     .learn-more-section .arrow-down {
       font-size: 3em;
-      animation: bounce 2s infinite; /* Add animation for a bouncing effect */
+      animation: bounce 2s infinite;
     }
-    
-    /* Bounce animation */
+
+    /* Bounce animation for arrow */
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -107,27 +106,26 @@
       }
     }
 
-
     /* New Section Between Hero and Alternating Content */
     .intro-section {
-      background-color: #1b3a57; /* Background color from the screenshot */
+      background-color: #1b3a57; /* Dark background */
       color: white;
       text-align: center;
-      padding: 80px 20px; /* Spacing inside the section */
+      padding: 80px 20px;
     }
 
     .intro-section h2 {
-      font-size: 2.2em; /* Bold uppercase text */
+      font-size: 2.2em;
       font-weight: 700;
-      letter-spacing: 2px; /* Increase letter spacing for a bold effect */
-      margin-bottom: 20px; /* Space between the header and the paragraph */
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
     .intro-section p {
-      font-size: 1.2em; /* Larger font size for readability */
-      line-height: 1.8em; /* Comfortable line height */
-      max-width: 800px; /* Restrict the width for readability */
-      margin: 0 auto; /* Center the paragraph */
+      font-size: 1.2em;
+      line-height: 1.8em;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     /* Alternating Section Styling */
@@ -135,16 +133,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 100%; /* Extend background across the entire page */
-      padding: 40px 0; /* Padding inside the alternating sections */
+      max-width: 100%;
+      padding: 40px 0;
       gap: 40px;
     }
 
     .alt-section img {
-      width: 45%; /* Set maximum width of the image */
-      max-height: 400px; /* Set maximum height of the image */
+      width: 45%;
+      max-height: 400px;
       border-radius: 10px;
-      object-fit: cover; /* Ensure the image fits within the defined width/height */
+      object-fit: cover;
     }
 
     .alt-section .text {
@@ -155,73 +153,70 @@
     }
 
     .alt-section h2 {
-      font-size: 2.2em; /* Increased font size for the headers */
+      font-size: 2.2em;
       font-weight: 700;
-      margin-bottom: 20px; /* Space below headers */
-      letter-spacing: 0.5px; /* Adds letter spacing for a cleaner look */
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
     }
 
     .alt-section p {
-      font-size: 1.2em; /* Slightly larger font for paragraphs */
-      line-height: 1.8em; /* Increased line height for readability */
-      margin-bottom: 15px; /* Space below paragraphs */
+      font-size: 1.2em;
+      line-height: 1.8em;
+      margin-bottom: 15px;
     }
 
     .section-blue {
-      background-color: #1b3a57; /* Dark blue for first section */
+      background-color: #1b3a57;
     }
 
     .section-lightblue {
-      background-color: #294a99; /* Lighter blue for second section */
+      background-color: #294a99;
     }
 
     .section-third {
-      background-color: #1e497f; /* Slightly different shade for third section */
+      background-color: #1e497f;
     }
 
     /* Section and Card Styling */
     .section {
       display: flex;
-      justify-content: space-between; /* Spread out the cards */
-      max-width: 1200px; /* Set a maximum width for the cards container */
-      margin: 40px auto; /* Center the cards horizontally */
-      padding: 0 40px; /* Add space on the sides */
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 40px;
     }
 
     .card {
-      text-align: left; /* Left-align the card content */
+      text-align: left;
       width: 30%;
       position: relative;
       font-weight: 300;
     }
 
-    /* Vertical line between cards */
     .card:not(:last-child):after {
       content: "";
       position: absolute;
       top: 10%;
-      right: -20px; /* Shift the line slightly outward to match the relaxed spacing */
+      right: -20px;
       height: 80%;
       width: 1px;
       background-color: #E0E0E0;
     }
 
-    /* Card Header Styling */
     .card h2 {
-      color: #3366cc; /* Darker blue for headings */
+      color: #3366cc;
       font-weight: 400;
-      margin-bottom: 20px; /* Add space below the heading */
+      margin-bottom: 20px;
     }
 
     .card p {
-      color: #7d7d7d; /* Grey color for paragraphs */
+      color: #7d7d7d;
       font-weight: 300;
-      margin-bottom: 20px; /* Add space below the paragraph */
+      margin-bottom: 20px;
     }
 
-    /* Button Styling */
     .card button {
-      background-color: #3366cc; /* Darker blue for buttons */
+      background-color: #3366cc;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -229,12 +224,12 @@
       font-size: 1em;
       font-family: 'Raleway', sans-serif;
       margin-top: 10px;
-      text-align: left; /* Left-align the button */
+      text-align: left;
       display: inline-block;
     }
 
     .card button:hover {
-      background-color: #1b3a57; /* Match hover color to footer */
+      background-color: #1b3a57;
     }
 
     footer {
@@ -248,91 +243,97 @@
 </head>
 <body>
 
-  <!-- Header Links embedded over the hero image -->
-  <div class="header">
-    <a href="index.html">Home</a>
-    <a href="biography.html">Biography</a>
-    <a href="research.html">Research</a>
-    <a href="outreach.html">Outreach</a>
-    <a href="jonah_peter_cv.pdf">CV/Contact</a>
-  </div>
-
-  <!-- Hero Section with Fixed Background -->
-  <div class="hero">
-    <h1>Jonah Peter</h1>
-    <p>Harvard University</p>
-  </div>
-
-  <!-- Learn More Section -->
-  <div class="learn-more-section">
-    <h2>LEARN MORE</h2>
-    <div class="arrow-down">↓</div>
-  </div>
-
-  <!-- New Section Between Hero and Alternating Content -->
-  <div class="intro-section">
-    <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
-    <p>
-      The idea that the earliest stages of chemical evolution may have proceeded deterministically 
-      as a consequence of astrophysical and planetary constraints is both intuitive and appealing. 
-      I study the physical processes leading to the formation of life's essential building blocks:
-      from charged particle dynamics on the surfaces of icy worlds, to the quantum optical properties 
-      of primordial biopolymers.
-    </p>
-  </div>
-
-  <!-- Alternating Content Section 1 -->
-  <div class="alt-section section-blue">
-    <img src="enceladus.jpg" alt="Enceladus">
-    <div class="text">
-      <h2>THE SEARCH FOR LIFE AT ENCELADUS</h2>
-      <p>More info coming soon!</p>
-      <p>Related Publications: Peter et al., 2023</p>
+  <div class="container">
+    
+    <!-- Header Links embedded over the hero image -->
+    <div class="header">
+      <a href="index.html">Home</a>
+      <a href="biography.html">Biography</a>
+      <a href="research.html">Research</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="jonah_peter_cv.pdf">CV/Contact</a>
     </div>
-  </div>
 
-  <!-- Alternating Content Section 2 -->
-  <div class="alt-section section-lightblue">
-    <div class="text">
-      <h2>QUANTUM COHERENCE: AN EXPLANATION FOR BIOLOGICAL HOMOCHIRALITY?</h2>
+    <!-- Hero Section with Fixed Background -->
+    <div class="hero">
+      <div>
+        <h1>Jonah Peter</h1>
+        <p>Harvard University</p>
+      </div>
+    </div>
+
+    <!-- Learn More Section -->
+    <div class="learn-more-section">
+      <h2>LEARN MORE</h2>
+      <div class="arrow-down">↓</div>
+    </div>
+
+    <!-- New Section Between Hero and Alternating Content -->
+    <div class="intro-section">
+      <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
       <p>
-        The pervasive observation of enantiomeric excesses consistent with Earth biology 
-        (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
-        bodies across the solar system points towards an astronomical scale symmetry breaking
-        event before the origin of life.
+        The idea that the earliest stages of chemical evolution may have proceeded deterministically 
+        as a consequence of astrophysical and planetary constraints is both intuitive and appealing. 
+        I study the physical processes leading to the formation of life's essential building blocks:
+        from charged particle dynamics on the surfaces of icy worlds, to the quantum optical properties 
+        of primordial biopolymers.
       </p>
-      <p>Related Publications: Peter et al., 2024a, 2024b</p>
     </div>
-    <img src="double_helix.jpg" alt="DNA">
-  </div>
 
-  <!-- Alternating Content Section 3 (Re-added) -->
-  <div class="alt-section section-third">
-    <img src="enceladus.jpg" alt="Enceladus">
-    <div class="text">
-      <h2>Could Icy Ocean Worlds Support Life?</h2>
-      <p>More info coming soon!</p>
-      <p>Related Publications: Peter et al., 2023</p>
+    <!-- Alternating Content Section 1 -->
+    <div class="alt-section section-blue">
+      <img src="enceladus.jpg" alt="Enceladus">
+      <div class="text">
+        <h2>THE SEARCH FOR LIFE AT ENCELADUS</h2>
+        <p>More info coming soon!</p>
+        <p>Related Publications: Peter et al., 2023</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Main Section with Cards (Now placed below alternating content) -->
-  <div class="section">
-    <div class="card">
-      <h2>Prebiotic building blocks at Enceladus</h2>
-      <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
-      <a href="research.html#astrobiology"><button>More</button></a>
+    <!-- Alternating Content Section 2 -->
+    <div class="alt-section section-lightblue">
+      <div class="text">
+        <h2>QUANTUM COHERENCE: AN EXPLANATION FOR BIOLOGICAL HOMOCHIRALITY?</h2>
+        <p>
+          The pervasive observation of enantiomeric excesses consistent with Earth biology 
+          (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
+          bodies across the solar system points towards an astronomical scale symmetry breaking
+          event before the origin of life.
+        </p>
+        <p>Related Publications: Peter et al., 2024a, 2024b</p>
+      </div>
+      <img src="double_helix.jpg" alt="DNA">
     </div>
-    <div class="card">
-      <h2>Chiral-induced spin selectivity of light</h2>
-      <p>A breakthrough study of the CISS effect applied to light.</p>
-      <a href="research.html#quantum-optics"><button>More</button></a>
+
+    <!-- Alternating Content Section 3 (Re-added) -->
+    <div class="alt-section section-third">
+      <img src="enceladus.jpg" alt="Enceladus">
+      <div class="text">
+        <h2>Could Icy Ocean Worlds Support Life?</h2>
+        <p>More info coming soon!</p>
+        <p>Related Publications: Peter et al., 2023</p>
+      </div>
     </div>
-    <div class="card">
-      <h2>Media updates<br>&nbsp;</h2>
-      <p>See our latest press coverage and learn about what's coming next!</p>
-      <button>More</button>
+
+    <!-- Main Section with Cards -->
+    <div class="section">
+      <div class="card">
+        <h2>Prebiotic building blocks at Enceladus</h2>
+        <p>Read about our discovery of hydrogen cyanide at Saturn's icy ocean moon.</p>
+        <a href="research.html#astrobiology"><button>More</button></a>
+      </div>
+      <div class="card">
+        <h2>Chiral-induced spin selectivity of light</h2>
+        <p>A breakthrough study of the CISS effect applied to light.</p>
+        <a href="research.html#quantum-optics"><button>More</button></a>
+      </div>
+      <div class="card">
+        <h2>Media updates<br>&nbsp;</h2>
+        <p>See our latest press coverage and learn about what's coming next!</p>
+        <button>More</button>
+      </div>
     </div>
+
   </div>
 
   <!-- Footer Section -->
