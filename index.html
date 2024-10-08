@@ -108,26 +108,7 @@
       border-radius: 5px; /* Rounded corners */
       font-size: 1em;
       font-weight: 500;
-      z-index: 1; /* Ensure text is above the blur */
-      overflow: hidden; /* Prevent overflow from the pseudo-element */
       transition: filter 0.3s ease; /* Smooth transition for the blur effect */
-    }
-
-    .button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: inherit; /* Copy the button's gradient background */
-      z-index: -1;
-      filter: blur(5px); /* Apply blur to background only */
-      transition: filter 0.3s ease; /* Smooth blur transition */
-    }
-    
-    .button:hover::before {
-      filter: blur(8px); /* Increase blur on hover */
     }
     
     .button:hover {
@@ -182,10 +163,11 @@
     }
 
 
-    /* New Section Between Hero and Alternating Content */
+    /* Intro Section Between Hero and Alternating Content */
     .intro-section {
       background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       color: white;
+      height: 50vh;
       text-align: center;
       padding: 80px 20px; /* Spacing inside the section */
     }
@@ -208,6 +190,7 @@
     .alt-section {
       display: flex;
       justify-content: space-between;
+      height: 50vh;
       align-items: center;
       max-width: 100%; /* Extend background across the entire page */
       padding: 40px 0; /* Padding inside the alternating sections */
@@ -353,7 +336,7 @@
     <div class="arrow-down">↓</div>
   </div>
 
-  <!-- New Section Between Hero and Alternating Content -->
+  <!-- Intro Section -->
   <div class="intro-section">
     <h2>PHYSICAL MODELS FOR THE ORIGIN OF LIFE</h2>
     <p>
