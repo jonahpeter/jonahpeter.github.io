@@ -92,20 +92,42 @@
       background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       color: white;
       text-align: center;
-      padding: 80px 20px; /* fixed padding */
+      padding: 10px 20px; /* fixed padding */
       height: 30vh; /* Set height to 100 - hero height (in vh) to keep at bottom of browser*/
       position: relative;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center; /* Center the buttons */
+      gap: 20px; /* Add spacing between the buttons */
+      margin-bottom: 20px; /* Add space below the buttons */
+    }
+    
+    .button {
+      background-color: #3366cc; /* Button color */
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px; /* Button padding */
+      border-radius: 5px; /* Rounded corners */
+      font-size: 1em;
+      font-weight: 500;
+    }
+    
+    .button:hover {
+      background-color: #1b3a57; /* Darker blue on hover */
     }
     
     .learn-more-section h2 {
       font-size: 1.5em;
       font-weight: 600;
       letter-spacing: 1.5px; /* Add letter spacing for visual effect */
-      margin-bottom: 30px; /* Space between text and arrow */
+      margin-bottom: 20px; /* Space between text and arrow */
     }
     
     .learn-more-section .arrow-down {
-      font-size: 3em;
+      font-size: 2.5em;
+      margin-top: 20px; /* Add space above the arrow to move it down */
       animation: bounce 2s infinite; /* Add animation for a bouncing effect */
     }
     
@@ -281,6 +303,13 @@
 
   <!-- Learn More Section -->
   <div class="learn-more-section">
+
+      <!-- Buttons inserted above the "LEARN MORE" text -->
+    <div class="buttons-container">
+      <a href="https://placeholder1.com" class="button">CV</a>
+      <a href="https://placeholder2.com" class="button">Publications</a>
+      <a href="https://placeholder3.com" class="button">Press Coverage</a>
+    </div>
     <h2>LEARN MORE</h2>
     <div class="arrow-down">↓</div>
   </div>
