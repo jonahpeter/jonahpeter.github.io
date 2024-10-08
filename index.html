@@ -111,19 +111,21 @@
     }
     
     .button:nth-child(1) {
-      background-position: center -300px; /* Leftmost part of the gradient for CV */
+      background-position: 40%; /* Leftmost part of the gradient for CV */
     }
     
     .button:nth-child(2) {
-      background-position: center; /* Center of the gradient for Publications */
+      background-position: 50%; /* Center of the gradient for Publications */
     }
     
     .button:nth-child(3) {
-      background-position: center 300px; /* Rightmost part of the gradient for Press Coverage */
+      background-position: 60%; /* Rightmost part of the gradient for Press Coverage */
     }
     
+        /* Add Blur Effect on Hover */
     .button:hover {
-      background-color: #1b3a57; /* Darker hover effect */
+      filter: blur(3px); /* Apply a blur effect */
+      cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
     }
 
     .learn-more-section {
