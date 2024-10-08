@@ -54,7 +54,7 @@
       background-size: contain;
       background-position: center -75px; /* Manually adjust the vertical position */
       background-attachment: fixed; /* Keep the background fixed while scrolling */
-      height: 80vh;
+      height: 85vh;
       text-align: center;
       color: white;
       position: relative;
@@ -108,6 +108,9 @@
       border-radius: 5px; /* Rounded corners */
       font-size: 1em;
       font-weight: 500;
+      z-index: 1; /* Ensure text stays above the background */
+      overflow: hidden;
+      transition: background 0.3s ease; /* Smooth transition for the blur effect */
     }
     
     .button:nth-child(1) {
@@ -122,10 +125,20 @@
       background-position: 60%; /* Rightmost part of the gradient for Press Coverage */
     }
     
-        /* Add Blur Effect on Hover */
+    .button:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit; /* Use the same gradient background */
+      filter: blur(5px); /* Apply the blur effect to the background */
+      z-index: -1; /* Ensure the blur stays behind the text */
+    }
+    
     .button:hover {
-      filter: blur(3px); /* Apply a blur effect */
-      cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+      cursor: pointer; /* Change cursor to pointer */
     }
 
     .learn-more-section {
@@ -133,7 +146,7 @@
       color: white;
       text-align: center;
       padding: 5vh 0; /* fixed padding */
-      height: 20vh; /* Set height to 100 - hero height (in vh) to keep at bottom of browser*/
+      height: 15vh; /* Set height to 100 - hero height (in vh) to keep at bottom of browser*/
       position: relative;
     }
     
