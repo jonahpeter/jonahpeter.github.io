@@ -100,6 +100,8 @@
     
     .button {
       background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
+      background-size: 300%;
+      border: none;
       color: white;
       text-decoration: none;
       padding: 15px 30px; /* Button padding */
@@ -108,8 +110,20 @@
       font-weight: 500;
     }
     
+    .button:nth-child(1) {
+      background-position: left; /* Leftmost part of the gradient for CV */
+    }
+    
+    .button:nth-child(2) {
+      background-position: center; /* Center of the gradient for Publications */
+    }
+    
+    .button:nth-child(3) {
+      background-position: right; /* Rightmost part of the gradient for Press Coverage */
+    }
+    
     .button:hover {
-      background-color: #1b3a57; /* Darker blue on hover */
+      background-color: #1b3a57; /* Darker hover effect */
     }
 
     .learn-more-section {
