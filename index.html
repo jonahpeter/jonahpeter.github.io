@@ -54,7 +54,7 @@
       background-size: contain;
       background-position: center -75px; /* Manually adjust the vertical position */
       background-attachment: fixed; /* Keep the background fixed while scrolling */
-      height: 70vh;
+      height: 80vh;
       text-align: center;
       color: white;
       position: relative;
@@ -93,22 +93,22 @@
       color: white;
       text-align: center;
       padding: 10px 20px; /* fixed padding */
-      height: 30vh; /* Set height to 100 - hero height (in vh) to keep at bottom of browser*/
+      height: 20vh; /* Set height to 100 - hero height (in vh) to keep at bottom of browser*/
       position: relative;
     }
 
     .buttons-container {
       display: flex;
       justify-content: center; /* Center the buttons */
-      gap: 20px; /* Add spacing between the buttons */
-      margin-bottom: 20px; /* Add space below the buttons */
+      gap: 30px; /* Add spacing between the buttons */
+      margin-bottom: 30px; /* Add space below the buttons */
     }
     
     .button {
-      background-color: #3366cc; /* Button color */
+      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       color: white;
       text-decoration: none;
-      padding: 10px 20px; /* Button padding */
+      padding: 15px 30px; /* Button padding */
       border-radius: 5px; /* Rounded corners */
       font-size: 1em;
       font-weight: 500;
@@ -299,17 +299,17 @@
     <img src="head_shot_cropped.jpg" alt="Profile Image" class="profile-image"> <!-- Profile image on the left -->
     <h1>Jonah Peter</h1>
     <p>PhD Candidate, Harvard University</p>
+
+    <!-- Buttons inserted at the bottom -->
+    <div class="buttons-container">
+      <a href="jonah_peter_cv.pdf" class="button">CV</a>
+      <a href="https://scholar.google.com/citations?user=uvJ5yq4AAAAJ&hl=en&authuser=1" class="button">PUBLICATIONS</a>
+      <a href="https://placeholder3.com" class="button">PRESS COVERAGE</a>
+    </div>
   </div>
 
   <!-- Learn More Section -->
   <div class="learn-more-section">
-
-      <!-- Buttons inserted above the "LEARN MORE" text -->
-    <div class="buttons-container">
-      <a href="https://placeholder1.com" class="button">CV</a>
-      <a href="https://placeholder2.com" class="button">Publications</a>
-      <a href="https://placeholder3.com" class="button">Press Coverage</a>
-    </div>
     <h2>LEARN MORE</h2>
     <div class="arrow-down">↓</div>
   </div>
