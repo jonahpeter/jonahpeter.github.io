@@ -228,15 +228,18 @@
     }
 
     .section-lightblue {
-      background-color: #294a99; /* Lighter blue for second section */
+      background-color: #1b3a57; /* Lighter blue for second section */
+      filter: brightness(1.1);
     }
 
     .section-third {
-      background-color: #1e497f; /* Slightly different shade for third section */
+      background-color: #1b3a57; /* Slightly different shade for third section */
+      filter: brightness(1.05);
     }
 
     /* Section and Card Styling */
     .section {
+      background: linear-gradient(to right, #0b0f38, #045f7b, #1fa582); /* Color gradient background */
       display: flex;
       justify-content: space-between; /* Spread out the cards */
       max-width: 1200px; /* Set a maximum width for the cards container */
@@ -317,9 +320,7 @@
   <div class="hero">
     <img src="head_shot_cropped.jpg" alt="Profile Image" class="profile-image"> <!-- Profile image on the left -->
     <h1>JONAH PETER</h1>
-    <p>PhD CANDIDATE</p>
-    <p>BIOPHYSICS / ORIGINS OF LIFE INITIATIVE</p>
-    <p>HARVARD UNIVERSITY</p>
+    <p>PhD CANDIDATE, HARVARD UNIVERSITY</p>
 
     <!-- Buttons inserted at the bottom -->
     <div class="buttons-container">
@@ -386,10 +387,9 @@
       <h2>Chiral Light-Matter Interactions and Biological Homochirality</h2>
       <p>
         The pervasive observation of enantiomeric excesses consistent with Earth biology 
-        (right-handed sugars, left-handed amino acids) amongst compositionally diverse 
-        bodies across the solar system points towards a large-scale symmetry breaking
+        amongst compositionally diverse solar system bodies points towards a large-scale symmetry breaking
         agent before (or during) the origin of life. Circularly polarized light can act 
-        as such an agent through its differential interaction with enantiomers of a given handedness. 
+        as such an agent through its differential interaction with chiral molecules. 
         We are exploring the role of quantum coherence as a chiral amplification mechanism that could 
         potentially explain the source of life's chiral bias.
       </p>
